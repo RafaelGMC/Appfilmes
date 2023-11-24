@@ -1,12 +1,23 @@
 package br.com.etecia.myapp;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class AdapterFilmes extends RecyclerView.Adapter<AdapterFilmes.ViewHolder> {
+    private Context context;
+    private List<Filmes> listFilmes;
+
+    public AdapterFilmes(Context context, List<Filmes> listFilmes) {
+        this.context = context;
+        this.listFilmes = listFilmes;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
